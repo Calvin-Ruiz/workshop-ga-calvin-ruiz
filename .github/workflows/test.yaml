@@ -45,6 +45,7 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
+            - run: mkdir -p artifact
             - name: Compile
               run: make
             - name: functional test
