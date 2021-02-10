@@ -26,12 +26,12 @@ jobs:
 
             - name: Run tests
               shell: bash # Optionnal
-              run: make tests_run &> artifact/test.txt
+              run: make tests_run
 
             - name: Get coverage
               shell: bash
               if: ${{ always() }}
-              run: make coverage >> artifact/test.txt
+              run: make coverage &> artifact/test.txt
 
             - uses: actions/upload-artifact@v2
               if: ${{ always() }}
