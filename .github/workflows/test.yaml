@@ -46,7 +46,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
             - name: functional test
-              run: bash functional-test.sh &> artifact/test.txt
+              run: bash functional-test.sh &> artifact/functionnal.txt
             - uses: actions/upload-artifact@v2
               with:
                   name: my-artifact
