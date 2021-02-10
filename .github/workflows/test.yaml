@@ -1,4 +1,16 @@
 name: Tests
-on: [push]
-jobs: hello-world
-env: ubuntu-20.04
+
+on:
+    push:
+        branches:
+            - master
+            - dev
+
+jobs:
+    hello-world:
+        runs-on: ubuntu-20.04
+
+    steps:
+        - name: Say hello world
+            shell: bash # Optionnal
+            run: echo Welcome to the Github Action workshop !
