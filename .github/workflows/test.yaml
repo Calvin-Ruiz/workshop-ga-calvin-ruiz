@@ -19,4 +19,4 @@ jobs:
         steps:
             - name: Step 0
               shell: bash # Optionnal
-              run: make tests-run && make coverage
+              run: pwd; make tests-run && make coverage
