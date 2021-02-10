@@ -10,7 +10,7 @@ jobs:
     hello-world:
         runs-on: ubuntu-20.04
 
-    steps:
-        - name: Say hello world
-            shell: bash # Optionnal
-            run: echo Welcome to the Github Action workshop !
+        steps:
+            - name: Say hello world
+                shell: bash # Optionnal
+                run: echo Welcome to the Github Action workshop !
