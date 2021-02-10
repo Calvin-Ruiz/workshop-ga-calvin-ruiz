@@ -1,0 +1,4 @@
+name: Tests
+on: [push]
+jobs: hello-world
+env: ubuntu-20.04
