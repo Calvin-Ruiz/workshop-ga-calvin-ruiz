@@ -43,7 +43,7 @@ Test(basic, divide)
 Test(basic, modulo_by_0)
 {
     const size_t result = do_op(6, MOD, 0);
-    cr_expect_eq(0, result);
+    cr_expect_eq(6, result);
 }
 
 /**
