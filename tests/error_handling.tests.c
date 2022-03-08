@@ -28,3 +28,8 @@ Test(error_handling, invalid_string, .exit_code=84)
 {
     get_number("-34234564323456765432RE453C");
 }
+
+Test(error_handling, overflow, .exit_code=84)
+{
+    get_number("100000000000000000000000000000000000000000");
+}

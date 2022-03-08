@@ -40,14 +40,15 @@ Test(basic, divide)
     cr_expect_eq(6 / 3, result);
 }
 
+Test(basic, modulo_by_0)
+{
+    const size_t result = do_op(6, MOD, 0);
+    cr_expect_eq(0, result);
+}
+
 /**
  * Error handling on do_op
  */
-Test(error_handling, modulo_by_0, .exit_code=84)
-{
-    do_op(2, MOD, 0);
-}
-
 Test(error_handling, divide_by_0, .exit_code=84)
 {
     do_op(2, DIV, 0);
@@ -57,4 +58,3 @@ Test(error_handling, invalid_operator, .exit_code=84)
 {
     do_op(2, 'x', 0);
 }
-
