@@ -28,7 +28,7 @@ size_t do_op(long int nb1, char op, long int nb2)
             return nb1 * nb2;
         case MOD:
             if (nb2 == 0) {
-                EXIT_ERROR("%ld %c %ld: modulo by 0\n", nb1, op, nb2);
+                return nb1; // Because of the definition of the modulo
             }
             return nb1 % nb2;
         case DIV:
